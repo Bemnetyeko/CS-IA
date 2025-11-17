@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('Images/loginbg.jpg') no-repeat center center/cover;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;        /* keeps items centered vertically */
+  justify-content: space-between;
+  background-color: rgb(116, 0, 0);
+  padding: 0.3rem 1rem;       /* reduce top/bottom padding */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  height: 55px;               /* fix navbar height */
+}
+
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+.home-icon {
+  width: 28px;
+  height: 28px;
+  
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.4rem;              /* less space between items */
+  position: absolute;
+  top: 2.2rem;              /* adjust dropdown distance */
+  right: 0;
+  width: 160px;             /* narrower */
+  background-color: #ebebeb;
+  padding: 0.4rem;          /* smaller padding inside */
+  border-radius: 0.25rem;
+  color: black;
+  font-weight: 600;
+  font-size: 0.9rem;        /* smaller text */
+  z-index: 10;
+}
+
+
+.mobile-menu:hover .mobile-nav {
+  display: flex;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav a:hover {
+  color: rgb(116, 0, 0);
+}
+
+.menu-button {
+  font-size: 1.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0;
+  line-height: 0;
+
+  transform: translateY(4px);  /* pushes it a little down */
+}
+
+
+/* Desktop Nav */
+.desktop-nav {
+  display: none;
+}
+
+.desktop-nav a {
+  text-decoration: none;
+  background-color: white;
+  padding: 6px 11px;
+  margin: 5px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: rgb(116, 0, 0);
+  transition: 0.3s;
+}
+
+.desktop-nav a:hover {
+  background-color: #949494;
+}
+
+/* Desktop View */
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 100px 15px 0;
+  flex-wrap: wrap;
+
+}
+
+.form-box {
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.2); /* white with 20% opacity */
+  backdrop-filter: blur(6px);  
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+  color: white;
+}
+
+
+h2{
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input, select{
+  width: 100%;
+  padding: 12px;
+  background: #eee;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+button{
+  width: 100%;
+  padding: 12px;
+  background: #ff0000;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color:#fff;
+  font-weight: 500;
+  margin-bottom: 20px;
+  transition: 0.5s;
+}
+
+button:hover{
+  background: #bdbdbd;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  padding: 12px;
+  background: #f8d7da !important;
+  border-radius: 6px !important;
+  font-size: 16px !important;
+  color: #a42834 !important;
+  text-align: center !important;
+  margin-bottom: 20px !important;
+}
+
+

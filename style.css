@@ -1,0 +1,106 @@
+/* ========== BASE STYLES ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: serif;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f3f4f6;
+  padding: 1rem;
+}
+
+/* LOGO */
+.logo {
+  font-size: 1.25rem;
+  font-weight: bolder;
+  color: #ef4444;
+  text-decoration: none;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: absolute;
+  top: 1.7rem;
+  right: 0;
+  width: 200px;
+  background-color: #ebebeb;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  color: black;
+  font-weight: 600;
+  font-size: 1.125rem;
+  z-index: 10;
+}
+
+.mobile-menu:hover .mobile-nav {
+  display: flex;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav a:hover {
+  color: #870000;
+}
+
+.menu-button {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+}
+
+/* ========== DESKTOP NAV ========== */
+.desktop-nav {
+  display: none;
+}
+
+/* ========== MEDIA QUERY: DESKTOP VIEW ========== */
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: flex;
+    gap: 0.75rem;
+    background-color: #f3f4f6;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    color: #374151;
+    font-weight: 600;
+    font-size: 1.125rem;
+  }
+
+  .desktop-nav a {
+    text-decoration: none;
+    color: #374151;
+    transition: color 0.3s ease;
+  }
+
+  .desktop-nav a:hover {
+    color: #b91c1c;
+  }
+}

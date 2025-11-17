@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  background-color: #fff;
+  padding-top: 80px; /* prevent header overlap */
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(116, 0, 0);
+  padding: 0.75rem 1.5rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+/* ===== NAVIGATION ===== */
+.desktop-nav {
+  display: none;
+}
+
+.desktop-nav a {
+  text-decoration: none;
+  background-color: white;
+  padding: 6px 11px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: rgb(116, 0, 0);
+  transition: 0.3s;
+}
+
+.desktop-nav a:hover {
+  background-color: #949494;
+}
+
+/* ===== MOBILE MENU ===== */
+.mobile-menu {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  width: 200px;
+  background-color: #ebebeb;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  color: black;
+  font-weight: 600;
+  font-size: 1.125rem;
+  z-index: 10;
+}
+
+.mobile-menu:hover .mobile-nav {
+  display: flex;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav a:hover {
+  color: rgb(116, 0, 0);
+}
+
+.menu-button {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+/* ===== PROFILE MENU ===== */
+.profile-menu {
+  position: relative;
+  display: inline-block;
+  margin-left: 12px;
+}
+
+.profile-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #fff;
+  background: #fff;
+  object-fit: cover;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  background: #fff;
+  border-radius: 10px;
+  width: 220px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  padding: 14px;
+  z-index: 9999;
+  text-align: left;
+}
+
+.profile-menu:hover .dropdown {
+  display: block;
+}
+
+.dropdown p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #222;
+}
+
+.logout-link {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  background: #b30000;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.logout-link:hover {
+  background: #800000;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+  color: rgb(116, 0, 0);
+}
+
+/* ===== BOOKINGS ===== */
+.bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.booking-card {
+  background: #f9d4d4;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.booking-card h3 {
+  color: rgb(116, 0, 0);
+  margin-bottom: 10px;
+}
+
+.booking-card p {
+  margin: 4px 0;
+  font-size: 15px;
+}
+
+.delete-btn {
+  background: rgb(116, 0, 0);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.delete-btn:hover {
+  background: #800000;
+}
+
+/* ===== STATUS MESSAGES ===== */
+.success-message, .error-message {
+  text-align: center;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.success-message {
+  background: #d4edda;
+  color: #155724;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.no-bookings {
+  text-align: center;
+  font-style: italic;
+  color: #555;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+  .desktop-nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+}
+
+.action-buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn, .delete-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.edit-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #a71d2a;
+}
+
+/* Optional status color styling */
+.status.pending {
+  color: #e6b800;
+  font-weight: bold;
+}
+.status.approved {
+  color: #28a745;
+  font-weight: bold;
+}
+.status.denied {
+  color: #dc3545;
+  font-weight: bold;
+}

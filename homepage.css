@@ -1,0 +1,168 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(116, 0, 0);
+  padding: 0.75rem 1.5rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+.home-icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  width: 200px;
+  background-color: #ebebeb;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  color: black;
+  font-weight: 600;
+  font-size: 1.125rem;
+  z-index: 10;
+}
+
+.mobile-menu:hover .mobile-nav {
+  display: flex;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav a:hover {
+  color: rgb(116, 0, 0);
+}
+
+.menu-button {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+/* Desktop Nav */
+.desktop-nav {
+  display: none;
+}
+
+.desktop-nav a {
+  text-decoration: none;
+  background-color: white;
+  padding: 6px 11px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: rgb(116, 0, 0);
+  transition: 0.3s;
+}
+
+.desktop-nav a:hover {
+  background-color: #949494;
+}
+
+/* Desktop View */
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  height: calc(100vh - 62px);; /* Subtract navbar height */
+  background: url('Images/background2.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 64px; /* still needed to push below navbar */
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.btn {
+  background-color: #ffffff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(116, 0, 0);
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #949494;
+}
