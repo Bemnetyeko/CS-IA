@@ -24,7 +24,7 @@ function isActiveForm($formName, $activeForm) {
 <!-- HEADER -->
   <header>
     <!-- Logo outside navbar -->
-    <a href="homepage.php" class="logo">
+    <a href="index.html" class="logo">
       <img src="Images/home-icon3.png" alt="Home" class="home-icon">
     </a>
 
